@@ -2,17 +2,26 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
 
-Hello.defaultProps = {
-  name: 'Kalpesh'
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>Current time is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  )
 }
+
+setInterval(tick, 1000);
+
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="World" />,
+    <h1>Hello, world!</h1>,
     document.getElementById('root')
   )
 })
